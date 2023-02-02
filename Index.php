@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <title>Document</title>
@@ -12,7 +12,7 @@
     <div class="main_container">
         <div class="navbar_container">
             <img class="logo" src="img/logo.png" alt="logoimg">
-            <ul class="navbar"> 
+            <!--<ul class="navbar"> 
                 <li class="Ini">
                  <a href="" target="_blank"></a>
                 </li>
@@ -22,13 +22,13 @@
                 <li class="Con">
                     <a href="" target="_blank"></a>
                 </li>
-            </ul>
+            </ul>-->
     </div>
         <div class="searcher">
-            <select p name="type" id="">
-                <option disabled selected hidden value="">TIPO</option>
-                <option value="0">Autos/Camionetas</option>
-                <option value="1">Motos</option>
+            <select title="type" name="type" id="">
+                <!--<option disabled  hidden value="">TIPO</option>-->
+                <option selected value="0">AUTOS/CAMIONETAS</option>
+                <option disabled style="color: gray;" value="1">Motos(en construcción)</option>
             </select>
             <select name="year" id="">
                 <option disabled selected hidden value="">AÑO</option>
@@ -48,11 +48,5 @@
             <img src="..\img\lth.jpg" alt="img">
         </div>-->
     </div>
-
-    <?php
-        $mensaje = "hola xd ". 2+4;
-        echo $mensaje;
-    ?>
-
 </body>
-</html>
+</html>     

@@ -1,25 +1,34 @@
 *{
     margin: 0;
 }
+
+:root{
+    --main_color: rgb(48, 48, 184);
+}
+
 .main_container{
+    width: 100vw;
+    height: 100vh;
     display: -webkit-flex flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-flex-direcition: row;
     background-color:rgb(255, 255, 255); 
-    height: auto;
 }
 
+input{
+    accent-color: var(--main_color);
+}
 
 .navbar_container{
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
     height: 80px;
-    box-shadow: 1px 1px 7px;
+    box-shadow: 0px 2px 1.5px 0px gray;
+    padding: 10px;
 }
 
 .logo{
@@ -41,10 +50,70 @@
     margin-left: 10px;
 }
 
+.searcher{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /*box-shadow: 0px 2px 1.5px 0px gray;*/
+    height: 80px;
+    margin-top: 20px;
+}
+
+.searcher > select{
+    letter-spacing: 1.5px;
+    border-style: none;
+    /*border-color: var(--main_color);*/
+    /*border-width: 1.8px;*/
+    background: white;
+    text-align: center;
+    font-weight: 600;
+    height: 80%;
+    width: 15%;
+    margin: 5px;
+    font-size: 20px;
+    border-bottom: 3px solid var(--main_color);
+    transition: font-size 0.2s;
+    transition: 0.2s ease-out;
+}
+
+.searcher > select:hover{
+    border-left: 3px solid var(--main_color);
+    border-right: 3px solid var(--main_color);
+    border-top: 3px solid var(--main_color);
+    color: var(--main_color);
+    font-size: 21px;
+}
+
+.btnBuscar{
+    letter-spacing: 1.5px;
+    box-shadow: 2px 4px 0px 0px rgb(110, 110, 110);
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: var(--main_color);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: 0.2s ease-out;
+}
+
+.btnBuscar:hover{
+    font-size: 21px;
+    background-color: rgb(53, 85, 224);
+    box-shadow: 6px 8px 0px 0px gray;
+}
+
+
 a{
    text-decoration: none;
    margin: 0;
    padding: 0;
+   transition: 0.8;
 }
 
 a:link{
@@ -59,8 +128,6 @@ a:visited{
 a:hover{
     color: rgb(52, 116, 255);
     font-size: 21px;
-    transition: 0.8;
-
 }
 
 
@@ -92,43 +159,6 @@ a:hover{
     width: 100%;
 }
 
-.searcher{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    box-shadow: 1px 2px 5px;
-    margin: 2px 0px 10px 0px;
-    height: 80px;
-}
-
-.searcher > select{
-    width: 10%;
-    text-align: center;
-    font-weight: 800;
-    height: 50px;
-    width: 200px;
-    font-size: 20px;
-    
-}
-
-.btnBuscar{
-    box-shadow: 2px 2px;
-    border: 0;
-    border-radius: 25px;
-    font-size: 30px;
-    background-color: rgb(0, 50, 189);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.btnBuscar:hover{
-    background-color: rgb(98, 127, 255);
-}
-
 @media only screen and (max-width: 1200px) {
 
     .searcher{
@@ -137,24 +167,26 @@ a:hover{
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
-        box-shadow: 1px 2px 5px;
-        margin: 2px 0px 10px 0px;
         height: auto;
     }
 
     .searcher > select{
         width: 10%;
         text-align: center;
-        font-weight: 800;
+        font-weight: 600;
         height: 50px;
         width: 200px;
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 20px;
     }
 
-    .searcher > button{
+    .searcher > select:hover{
+        font-size: 18px;
+    }
+    .searcher > .btnBuscar{
+        letter-spacing: 3px;
         margin-top: 20px;
-        margin-bottom: 20px;
+        padding: 20px;
     }
 
 }
