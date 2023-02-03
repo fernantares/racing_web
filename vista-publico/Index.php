@@ -1,3 +1,5 @@
+<!--***********INDEX PUBLICO*********-->
+
 <?php 
     setcookie('titlepage','PRINCIPAL',0);
     include("template/header.php"); 
