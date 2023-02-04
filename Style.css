@@ -9,11 +9,11 @@
 .main_container{
     width: 100vw;
     height: 100vh;
-    display: -webkit-flex flex;
+    display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-flex-direcition: row;
-    background-color:rgb(255, 255, 255); 
+    background-color: white; 
 }
 
 input{
@@ -49,6 +49,39 @@ input{
     min-height: 35px;
     margin-left: 10px;
 }
+
+
+.main-dashboard{
+    margin-top: 2px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-flex-direcition: row;
+}
+
+.dashboard-card {
+    display: flex;
+    justify-items: center;
+    margin: 40px;
+    background-color:rgb(230, 230, 230);
+    width: 300px;
+    height: 300px;
+    border: 1px inset black;
+}
+
+.dashboard-card:hover{
+    box-shadow: 5px 5px 4px 0px rgb(110, 110, 110); 
+}
+
+.dashboard-card > img {
+    width: 50%;
+    height: 50%;
+}
+
 
 .searcher{
     width: 100%;
