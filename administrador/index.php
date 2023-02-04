@@ -14,7 +14,8 @@
                 <div class="descr">AGREGAR FABRICANTE</div>
             </div>
             <div class="dashboard-card">
-                
+                <img src="../img/agregar_modelo.png" alt="AGREGAR AUTO">
+                <div class="descr">AGREGAR MODELO</div>
             </div>
             <div class="dashboard-card">
                 
