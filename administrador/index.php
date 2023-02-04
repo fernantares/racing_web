@@ -5,20 +5,22 @@
 ?>
 
         <div class="main-dashboard">
-            <div class="dashboard-card">
+            <div id="add_car" class="dashboard-card">
                 <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
+                <div class="descr">AGREGAR AUTO</div>
             </div>
             <div class="dashboard-card">
-                <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
+                <img src="../img/agregar_fabricante.png" alt="AGREGAR AUTO">
+                <div class="descr">AGREGAR FABRICANTE</div>
             </div>
             <div class="dashboard-card">
-                <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
+                
             </div>
             <div class="dashboard-card">
-                <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
+                
             </div>
             <div class="dashboard-card">
-                <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
+                
             </div>
         </div>    
 
