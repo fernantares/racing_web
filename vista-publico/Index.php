@@ -1,7 +1,7 @@
 <!--***********INDEX PUBLICO*********-->
 
 <?php 
-    setcookie('titlepage','PRINCIPAL',0);
+    $varTitle = "Principal";
     include("template/header.php"); 
 ?>
         <div class="searcher">

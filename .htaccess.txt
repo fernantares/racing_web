@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /
+RewriteBase /racing_web/
+RewriteRule ^/$ index.php 

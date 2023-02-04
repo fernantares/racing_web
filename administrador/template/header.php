@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../Style.css">
     <title><?php
     $valorCookie = $_COOKIE['titlepage']; 
-    echo $valorCookie;
+    echo $varTitle;
     ?></title>
 </head>
 <body>

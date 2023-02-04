@@ -1,6 +1,6 @@
 <!--***********INDEX ADMINISTRADOR*********-->
 <?php 
-    setcookie('titlepage','PRINCIPAL-ADMIN',0);
+    $varTitle = "ADMIN";
     include("template/header.php"); 
 ?>
 
