@@ -9,11 +9,11 @@
                 <div class="profile-img"> 
                 <img src="../img/profile_photo_default.png" alt="profileimg">
                 </div>
-                <div class="info">PROFILE NAME DEFAULT</div>
+                <div class="info">DEFAULT PROFILE NAME </div>
             </div>
         </div>
-        <div class="main-dashboard">
-            <?php //-----------------SECCION AGREGAR--------------------------- ?>
+        <div class="dashboard">
+            <?php //-----------------FILA--------------------------- ?>
             <div class="section">
                 <div id="add_car" class="dashboard-card">
                     <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
