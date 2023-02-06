@@ -2,4 +2,5 @@ ICONS
 https://www.flaticon.com/free-icons/mounting" title="mounting icons">Mounting icons created by shin_icons - Flaticon
 https://www.flaticon.com/free-icons/car" title="car icons">Car icons created by Andrejs Kirma - Flaticon
 https://www.flaticon.com/free-icons/car-service" title="car service icons">Car service icons created by Hilmy Abiyyu A. - Flaticon
-"https://www.flaticon.com/free-icons/cars" title="cars icons">Cars icons created by Icon Mela - Flaticon
+https://www.flaticon.com/free-icons/cars" title="cars icons">Cars icons created by Icon Mela - Flaticon
+https://www.flaticon.com/free-icons/profile-picture" title="profile picture icons">Profile picture icons created by Md Tanvirul Haque - Flaticon
