@@ -1,9 +1,10 @@
-<!--***********INDEX ADMINISTRADOR*********-->
 <?php 
-    $varTitle = "ADMIN";
+    $varTitle = "ADMINISTRAR AUTOS";
     include("template/header.php"); 
+    require_once("redirect_pages.php");
 ?>
-    <div class="admin-container">
+
+<div class="admin-container">
         <div class="sidebar">
             <div class="profile-info" >
                 <div class="profile-img"> 
@@ -15,7 +16,7 @@
         <div class="dashboard">
             <?php //-----------------FILA--------------------------- ?>
             <div class="section">
-                <div id="add_car" class="dashboard-card">
+                <div id="admin_car" class="dashboard-card" onclick = "caradmin();">
                     <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR AUTOS</div>
                 </div>
@@ -43,5 +44,7 @@
             </div>
         </div>    
     </div>            
+
+
 
 <?php include("template/footer.php"); ?>
