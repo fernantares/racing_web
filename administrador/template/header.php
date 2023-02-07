@@ -17,5 +17,4 @@
             <img class="logo" src="../img/logo.png" alt="logoimg">     
     </div>
 
-    <script src="../../js.js"></script>
 <!--***********HEADER DE ADMINISTRADOR*********-->
