@@ -15,11 +15,11 @@
         <div class="dashboard">
             <?php //-----------------FILA--------------------------- ?>
             <div class="section">
-                <div onClick="pageselected(car_admin)" class="dashboard-card">
+                <div onClick="pageSelected('car_admin');" class="dashboard-card">
                     <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR AUTOS</div>
                 </div>
-                <div id="admin_make" class="dashboard-card">
+                <div onClick="pageSelected('make_admin');" class="dashboard-card">
                     <img src="../img/agregar_fabricante.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR FABRICANTES</div>
                 </div>

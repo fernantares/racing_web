@@ -1,6 +1,6 @@
 <!--***********ADMINISTRADOR DE AUTOS********-->
 <?php 
-    $varTitle = "ADMINISTRAR AUTOS";
+    $varTitle = "ADMINISTRAR FABRICANTES";
     include("template/header.php"); 
    
 ?>
