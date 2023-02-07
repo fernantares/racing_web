@@ -2,7 +2,7 @@
 
 <?php 
     $varTitle = "Principal";
-    include("template/header.php"); 
+    include("plantila/header.php"); 
 ?>
         <div class="searcher">
             <select title="type" name="type" id="">
@@ -25,4 +25,4 @@
             <button class="btnBuscar"> BUSCAR </button>
         </div>
   
-<?php include("template/footer.php"); ?>
+<?php include("plantilla/footer.php"); ?>
