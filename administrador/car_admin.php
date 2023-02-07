@@ -1,7 +1,7 @@
 <?php 
     $varTitle = "ADMINISTRAR AUTOS";
     include("template/header.php"); 
-    require_once("redirect_pages.php");
+   
 ?>
 
 <div class="admin-container">
@@ -16,15 +16,15 @@
         <div class="dashboard">
             <?php //-----------------FILA--------------------------- ?>
             <div class="section">
-                <div id="admin_car" class="dashboard-card" onclick = "caradmin();">
+                <div id="admin_car" class="dashboard-card">
                     <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR AUTOS</div>
                 </div>
-                <div id="add_make" class="dashboard-card">
+                <div id="admin_make" class="dashboard-card">
                     <img src="../img/agregar_fabricante.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR FABRICANTES</div>
                 </div>
-                <div id="add_model" class="dashboard-card">
+                <div id="admin_model" class="dashboard-card">
                     <img src="../img/agregar_modelo.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR MODELOS</div>
                 </div>        
@@ -44,7 +44,5 @@
             </div>
         </div>    
     </div>            
-
-
 
 <?php include("template/footer.php"); ?>
