@@ -1,9 +1,10 @@
-<!--***********INDEX ADMINISTRADOR*********-->
+<!--***********ADMINISTRADOR DE AUTOS********-->
 <?php 
-    $varTitle = "ADMINISTRADOR";
-    include("plantilla/header.php"); 
+    $varTitle = "ADMINISTRAR AUTOS";
+    include("../plantilla/header.php"); 
+   
 ?>
-        <div class="profile-container">
+      <div class="profile-container">
             <div class="profile-img-container"> 
             <img src="../img/profile_photo_default.png" alt="profileimg">
             </div>
@@ -40,4 +41,4 @@
             </div>
         </div>            
 
-<?php include("plantilla/footer.php"); ?>
+<?php include("../plantilla/footer.php"); ?>

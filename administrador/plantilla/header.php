@@ -12,9 +12,5 @@
 </head>
 <body>
     <div class="admin_container">
-        <!-- <div class="navbar_container">
-            <div class="titulo-nav">DASHBOARD DE ADMINISTRADOR</div>
-            <img class="logo" src="../img/logo.png" alt="logoimg">     
-        </div> -->
 
 <!--***********HEADER DE ADMINISTRADOR*********-->
