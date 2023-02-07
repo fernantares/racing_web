@@ -15,7 +15,7 @@
         <div class="dashboard">
             <?php //-----------------FILA--------------------------- ?>
             <div class="section">
-                <div id='admin_car' class="dashboard-card">
+                <div onClick="pageselected(car_admin)" class="dashboard-card">
                     <img src="../img/agregar_auto.png" alt="AGREGAR AUTO">
                     <div class="descr">ADMINISTRAR AUTOS</div>
                 </div>
