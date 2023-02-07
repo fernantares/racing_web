@@ -11,10 +11,10 @@
     ?></title>
 </head>
 <body>
-    <div class="main_container">
-        <div class="navbar_container">
+    <div class="admin_container">
+        <!-- <div class="navbar_container">
             <div class="titulo-nav">DASHBOARD DE ADMINISTRADOR</div>
             <img class="logo" src="../img/logo.png" alt="logoimg">     
-    </div>
+        </div> -->
 
 <!--***********HEADER DE ADMINISTRADOR*********-->

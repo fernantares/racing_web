@@ -1,4 +1,5 @@
+const hostwebadmin = 'http://localhost/racing_web/administrador/';
 
 function pageSelected (page){
-window.location.href = 'http://localhost/racing_web/administrador/' + page + '.php';
+window.location.href = hostwebadmin + page + '.php';
 };

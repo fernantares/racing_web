@@ -1,7 +1,7 @@
 <!--***********ADMINISTRADOR DE AUTOS********-->
 <?php 
     $varTitle = "ADMINISTRAR AUTOS";
-    include("template/header.php"); 
+    include("plantilla/header.php"); 
    
 ?>
 
@@ -21,4 +21,4 @@
         </div>    
     </div>            
 
-<?php include("template/footer.php"); ?>
+<?php include("plantilla/footer.php"); ?>
