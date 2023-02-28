@@ -2,7 +2,7 @@
 
 <?php 
     $varTitle = "Principal";
-    include("plantila/header.php"); 
+    include("plantilla/header.php"); 
 ?>
         <div class="searcher">
             <select title="type" name="type" id="">
