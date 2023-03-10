@@ -94,9 +94,8 @@ li:hover{
  a:visited{
      color: black;
  }
- 
- 
-/* ^^CONTENEDOR DE NAVEGADOR MAIN^^ */
+ /* ^^CONTENEDOR DE NAVEGADOR MAIN^^ */
+
 .btnCross{
     margin: 10px 10px 0px auto;
     font-size: 15px;
@@ -110,6 +109,33 @@ li:hover{
     transform: scale(1.04);
     background-color: rgb(236, 162, 50);
     box-shadow: 6px 8px 0px 0px gray;
+}
+
+/* CROSS REFERENCE MAAAIN */
+
+.crossmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscref{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 60px;    
+    border: none;    
+    border-bottom:3px solid #757575;
+    transition: 0.2s;
+}
+
+.buscref:focus{
+    outline: none;
+    border-bottom:10px solid var(--main_color);
+}
+
+.buscref:focus::placeholder{
+    color: rgba(2, 17, 92, 0.836);;
 }
 
 /*TITULO PARA LAS PÁGINAS UBICADO EN ADMINISTRADOR*/
