@@ -23,7 +23,7 @@
             <select name="motor" id="">
                 <option disabled selected hidden value="">MOTOR</option>
             </select>
-            <button class="btn btnSearcher">BUSCAR</button>
+            <button id="btncross" class="btn btnSearcher">BUSCAR</button>
         </div>
   
 <?php include("plantilla/footer.php"); ?>
