@@ -5,6 +5,7 @@
     $varTitle = "Principal";
     include("plantilla/header.php"); 
 ?>
+        <button id="btncross" class="btn btnCross">CONVERSIONES</button>
         <div class="searcher">
             <select title="type" name="type" id="">
                 <!--<option disabled  hidden value="">TIPO</option>-->
@@ -23,7 +24,7 @@
             <select name="motor" id="">
                 <option disabled selected hidden value="">MOTOR</option>
             </select>
-            <button id="btncross" class="btn btnSearcher">BUSCAR</button>
+            <button class="btn btnSearcher">BUSCAR</button>
         </div>
   
 <?php include("plantilla/footer.php"); ?>

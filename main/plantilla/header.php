@@ -7,7 +7,7 @@
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style.css">
-    <script src="../mainjs.js"></script>
+    <script src="mainjs.js" type="text/javascript" defer></script>
     <title><?php echo $varTitle; ?></title>
 </head>
 <body>
@@ -26,6 +26,5 @@
                     </li>
                 </ul>
                    </div>
-        <button class="btn btnCross">CONVERSIONES</button>
            
 <!--DIV MAIN-->   

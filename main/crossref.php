@@ -4,7 +4,7 @@
     include("plantilla/header.php"); 
 ?>
         <div class="">
-            <input placeholder="BUSCAR REFERENCIAS" value="">
+            <input name="buscref" placeholder="BUSCAR REFERENCIAS" value="">
         </div>
   
 <?php include("plantilla/footer.php"); ?>
