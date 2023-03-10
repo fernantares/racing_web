@@ -20,7 +20,7 @@ html, body{
 /* PLANTILLA BUTTON*/
 .btn{
     letter-spacing: 1.5px;
-    box-shadow: 2px 4px 0px 0px rgb(110, 110, 110);
+    box-shadow: 2px 4px 0px 0px rgb(99, 99, 99);
     border: 0px;
     border-radius: 5px;
     padding: 15px;
@@ -46,7 +46,7 @@ input{
 }
 
 .logo{
-    height: 90%;
+    height: 100%;
     width: 20%;
 }
 
@@ -56,8 +56,6 @@ input{
 }
 
 .navbar{ 
-    color: white;
-    font-size: 20px;
     font-weight: 700;
     height: auto;
     display: flex;
@@ -67,18 +65,26 @@ input{
 } 
 
 .navbar li{
-    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 12px;
     list-style-type: none;
-    min-height: 35px;
+    height: auto;
     margin-left: 10px;
+    background-color: var(--secondary_color);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
+li:hover{
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+}
 
-a{
+.navbar li a{
+    color: white;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
-    transition: 0.8;
  }
  
  a:link{
@@ -90,13 +96,6 @@ a{
  }
  
  
- a:hover{
-     color: rgb(52, 116, 255);
-     font-size: 21px;
- }
- 
- 
-
 /* ^^CONTENEDOR DE NAVEGADOR MAIN^^ */
 .btnCross{
     margin: 10px 10px 0px auto;
@@ -104,11 +103,11 @@ a{
     background-color: var(--secondary_color);
     color: white;
     transition: 0.2s ease-out;
-    width: 300px;
+    width: 180px;
 }
 
 .btnCross:hover{
-    font-size: 18px;
+    transform: scale(1.04);
     background-color: rgb(236, 162, 50);
     box-shadow: 6px 8px 0px 0px gray;
 }

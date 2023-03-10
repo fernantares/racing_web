@@ -14,7 +14,7 @@
         <div class="navbar_container">
             <img class="logo" src="../img/logo.png" alt="logoimg">
                 <ul class="navbar"> 
-                    <li class="Ini">
+                    <li  class="Ini">
                     <a href="" target="_blank">INICIO</a>
                     </li>
                     <li class="Nos">
