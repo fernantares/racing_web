@@ -17,12 +17,22 @@ html, body{
     --font-color-darkgray: rgb(100, 100, 100);
 }
 
+/* PLANTILLA BUTTON*/
+.btn{
+    letter-spacing: 1.5px;
+    box-shadow: 2px 4px 0px 0px rgb(110, 110, 110);
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
 
 input{
     accent-color: var(--main_color);
 }
 
-/* CONTENEDOR DE NAVEGADOR VISTA PUBLICO*/
+/* CONTENEDOR DE NAVEGADOR MAIN */
 .navbar_container{
     background-color: var(--main_color);
     display: flex;
@@ -33,37 +43,82 @@ input{
     height: 8%;
     /*box-shadow: 0px 2px 1.5px 0px gray;*/
     padding: 10px;
-    background-color: aqua;
+}
+
+.logo{
+    height: 90%;
+    width: 20%;
 }
 
 .logo img{
-    height: 2px;
-    width: 20px;
-    background-color: blue;
+    height: 50%;
+    width: 50%;
+}
+
+.navbar{ 
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.navbar li{
+    padding-top: 8px;
+    list-style-type: none;
+    min-height: 35px;
+    margin-left: 10px;
 }
 
 
-/*TITULO PARA LAS PÁGINAS UBICADO EN TEMPLATE ADMINISTRADOR*/
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.8;
+ }
+ 
+ a:link{
+     text-decoration: none;
+ }
+ 
+ a:visited{
+     color: black;
+ }
+ 
+ 
+ a:hover{
+     color: rgb(52, 116, 255);
+     font-size: 21px;
+ }
+ 
+ 
+
+/* ^^CONTENEDOR DE NAVEGADOR MAIN^^ */
+.btnCross{
+    margin: 10px 10px 0px auto;
+    font-size: 15px;
+    background-color: var(--secondary_color);
+    color: white;
+    transition: 0.2s ease-out;
+    width: 300px;
+}
+
+.btnCross:hover{
+    font-size: 18px;
+    background-color: rgb(236, 162, 50);
+    box-shadow: 6px 8px 0px 0px gray;
+}
+
+/*TITULO PARA LAS PÁGINAS UBICADO EN ADMINISTRADOR*/
 .titulo-nav {
     color: white;
     font-size: 3vw;
     font-weight: 600;
 }
-
-/*.navbar{
-    font-size: 20px;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */ 
-
-/*.navbar > li{
-    padding-top: 8px;
-    list-style-type: none;
-    min-height: 35px;
-    margin-left: 10px;
-}*/
 
 /*CONTENEDOR PRINCIPAL DE TODA LA PAGINA LO USA TODOS*/
 .main_container{
@@ -181,7 +236,6 @@ input{
     font-size:22px;
 }
 
-
 .searcher{
     width: 100%;
     display: flex;
@@ -219,47 +273,19 @@ input{
     font-size: 21px;
 }
 
-.btnBuscar{
-    letter-spacing: 1.5px;
-    box-shadow: 2px 4px 0px 0px rgb(110, 110, 110);
-    border: 0px;
-    border-radius: 5px;
+
+.btnSearcher{
     font-size: 20px;
     background-color: var(--main_color);
     color: white;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: 600;
     margin-left: 15px;
     transition: 0.2s ease-out;
 }
 
-.btnBuscar:hover{
+.btnSearcher:hover{
     font-size: 21px;
     background-color: rgb(53, 85, 224);
     box-shadow: 6px 8px 0px 0px gray;
-}
-
-
-a{
-   text-decoration: none;
-   margin: 0;
-   padding: 0;
-   transition: 0.8;
-}
-
-a:link{
-    text-decoration: none;
-}
-
-a:visited{
-    color: black;
-}
-
-
-a:hover{
-    color: rgb(52, 116, 255);
-    font-size: 21px;
 }
 
 
@@ -280,16 +306,7 @@ a:hover{
    
 }
 */
-.jumbotron_slider{ 
-    margin-top: 10PX;
-    background-color:darkcyan;
-    height: 400PX;
-}
 
-.jumbotron_slider > img{ 
-    height:100%;
-    width: 100%;
-}
 
 @media only screen and (max-width: 1200px) {
 

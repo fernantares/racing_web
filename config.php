@@ -1,5 +1,4 @@
 <?php 
-
 $host = "localhost"; /* Host name */
 $user = "bdadmin"; /* User */
 $password = "Chivas1995."; /* Password */

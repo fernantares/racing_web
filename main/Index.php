@@ -1,5 +1,6 @@
 <!--***********INDEX PUBLICO*********-->
 
+
 <?php 
     $varTitle = "Principal";
     include("plantilla/header.php"); 
@@ -22,7 +23,7 @@
             <select name="motor" id="">
                 <option disabled selected hidden value="">MOTOR</option>
             </select>
-            <button class="btnBuscar"> BUSCAR </button>
+            <button class="btn btnSearcher">BUSCAR</button>
         </div>
   
 <?php include("plantilla/footer.php"); ?>
