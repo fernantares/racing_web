@@ -38,8 +38,7 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 8%;
     /*box-shadow: 0px 2px 1.5px 0px gray;*/
     padding: 10px;
@@ -60,7 +59,7 @@ input{
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 } 
 
@@ -137,6 +136,44 @@ li:hover{
 .buscref:focus::placeholder{
     color: rgba(2, 17, 92, 0.836);;
 }
+
+/* TABLA DE CROSSREFERENCE*/
+.tableDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.tableCross {
+    width: 60%;
+    margin: 70px auto 0px auto;
+    font-size: 20px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tableCross th {  /* TH ENCABEZADOS */
+    background-color: var(--main_color);
+    color: white;
+    padding: 12px;
+  }
+
+
+tr, table{
+    border: 1px solid;
+}
+
+.spacer{
+    width: 100%;
+    height: 10px;
+    background-color: aqua;
+}
+/*.spacer :nth-child(1){
+    background-color: white;
+    border: 0px;
+}
+*/
 
 /*TITULO PARA LAS PÁGINAS UBICADO EN ADMINISTRADOR*/
 .titulo-nav {
