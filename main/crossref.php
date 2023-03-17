@@ -1,20 +1,24 @@
 
 <?php 
     $varTitle = "REFERENCIAS";
-    include("plantilla/header.php"); 
+    include("plantilla/header.php");
+    require_once("../config.php");
 ?>
+
     <div class="crossmain">
-        <input id="buscref" type="text" class="buscref" name="buscref" placeholder="BUSCAR REFERENCIAS..." autofocus spellcheck="false">
-    </div>
-
-
+        <form action="crossdata.php?=" method="get"> 
+            <input href="" id="buscref" type="text" class="buscref" name="buscref" placeholder="BUSCAR REFERENCIAS..." autofocus spellcheck="false">
+        </form>
+        </div>
     <table class="tableCross">
         <tr>
-            <th>Numero parte</th>
-            <td>181635R</td>
+        <th>Numero parte</th>
+            <td> <?php if($row = $res->fetch_assoc())  
+                   echo $row["code"];
+                $conn->close(); ?> 
+            </td>
         </tr>
-        <div class="spacer"></div>
-        <!--<tr class="spacer"><th><td></td></th></tr>-->
+        <tr class="spacer"><th><td></td></th></tr>
         <tr>
             <th>Marca</th>
             <td>US MOTOR</td>
