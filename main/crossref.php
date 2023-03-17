@@ -2,21 +2,19 @@
 <?php 
     $varTitle = "REFERENCIAS";
     include("plantilla/header.php");
-    require_once("../config.php");
+    include("crossdata.php");
 ?>
 
     <div class="crossmain">
-        <form action="crossdata.php?=" method="get"> 
-            <input href="" id="buscref" type="text" class="buscref" name="buscref" placeholder="BUSCAR REFERENCIAS..." autofocus spellcheck="false">
+        <form name="formcross" action="crossdata.php" method="POST"> 
+            <input id="buscref" type="text" class="buscref" name="buscRef" placeholder="BUSCAR REFERENCIAS..." autofocus spellcheck="false">
+            <button type="Submit" name="btnSend">PRUEBA</button>
         </form>
-        </div>
+       
     <table class="tableCross">
         <tr>
         <th>Numero parte</th>
-            <td> <?php if($row = $res->fetch_assoc())  
-                   echo $row["code"];
-                $conn->close(); ?> 
-            </td>
+            <td name="dataPart"></td>
         </tr>
         <tr class="spacer"><th><td></td></th></tr>
         <tr>
@@ -26,6 +24,5 @@
             <td>US 7104</td>
         </tr>
     </table> 
-
-
+    </div>
 <?php include("plantilla/footer.php"); ?>

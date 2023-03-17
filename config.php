@@ -1,4 +1,5 @@
 <?php 
+
 $host = "localhost"; /* Host name */
 $user = "root"; /* User */
 $password = ""; /* Password */
@@ -10,4 +11,4 @@ if ($conn ->connect_error) {
   die("Connection failed");
 }
 
-  ?>
+?>
