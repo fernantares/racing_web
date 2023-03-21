@@ -16,9 +16,9 @@
                 <tr class="spacer"><th><td></td></th></tr>
                 <tr>
                     <th>Marca</th>
-                        <td>US MOTOR</td>
+                        <td></td>
                     <th>Conversión</th>
-                        <td>US 7104</td>
+                        <td></td>
                 </tr>
             </table> 
     </div>
