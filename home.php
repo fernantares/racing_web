@@ -6,4 +6,3 @@ $url = "http://$host$ruta/$html";
 header("Location: $url");
 die();
 ?>
-
