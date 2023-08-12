@@ -17,7 +17,7 @@
                             <?php  
                             if(isset($_POST['buscRef'])){
                             $databusc = $_POST['buscRef'];
-                            $sqlarticles = "Select * from crosstable inner join articles on crosstable.idcode = articles.idarticle where idcode = '".$databusc."' or crosspart = '".$databusc."'";
+                            $sqlarticles = "Select * from crosstable inner join articles on crosstable.idcode = articles.idarticle where code = '".$databusc."' or crosspart = '".$databusc."'";
                             $res = $conn->query($sqlarticles);  
                             
                             while($row = $res->fetch_assoc()){ ?> 

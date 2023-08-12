@@ -168,7 +168,7 @@ tr{
 }
 
 .tableAdd th{
-    background-color: var(--detail-color-blue);
+    background-color: var(--main_color);
     color: white;
 }
 
@@ -176,10 +176,12 @@ tr{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
     font-size: 24px; 
-    font-weight: 500;   
-    border: none;     
+    font-weight: 200;   
 }
 
+.labelreference {
+    font-size: 30px;
+}
 
 /*TITULO PARA LAS PÁGINAS UBICADO EN ADMINISTRADOR*/
 .titulo-nav {

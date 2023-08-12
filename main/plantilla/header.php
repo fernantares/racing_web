@@ -16,13 +16,13 @@
             <img class="logo" src="../img/logo.png" alt="logoimg">
                 <ul class="navbar"> 
                     <li  class="Ini">
-                    <a href="" target="_blank">INICIO</a>
+                    <a href="crossref.php" target="_blank">CONSULTAR REFERENCIA</a>
                     </li>
                     <li class="Nos">
-                        <a href="" target="_blank">NOSOTROS</a>
+                        <a href="addreference.php" target="_blank">AGREGAR REFERENCIA</a>
                     </li>
                     <li class="Con">
-                        <a href="" target="_blank">CONTACTO</a>
+                        <a href="addarticle.php" target="_blank">AGREGAR ARTICULO</a>
                     </li>
                 </ul>
                    </div>
