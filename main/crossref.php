@@ -5,7 +5,7 @@
     include("plantilla/header.php");
 ?>
 
-    <div class="crossmain">
+    <div class="main">
         <form name="formCross" action="crossref.php" method="POST"> 
             <input id="buscref" type="text" class="buscref" name="buscRef" placeholder="BUSCAR REFERENCIAS..." autofocus spellcheck="false">
         </form>

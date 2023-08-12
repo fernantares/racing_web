@@ -112,7 +112,7 @@ li:hover{
 
 /* CROSS REFERENCE MAAAIN */
 
-.crossmain{
+.main{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,10 +157,29 @@ tr{
     border: 1px solid;
 }
 
-.spacer :nth-child(1){
-    background-color: white;
-    border: none;
+
+/* TABLA DE aAGREGAR ARTICULOS*/
+.tableAdd {
+    width: 60%;
+    margin: 40px auto 0px auto;
+    font-size: 20px;
+    text-align: center;
+    border-collapse: collapse;
 }
+
+.tableAdd th{
+    background-color: var(--detail-color-blue);
+    color: white;
+}
+
+.inputAdd{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    font-size: 24px; 
+    font-weight: 500;   
+    border: none;     
+}
+
 
 /*TITULO PARA LAS PÁGINAS UBICADO EN ADMINISTRADOR*/
 .titulo-nav {
