@@ -72,13 +72,7 @@ input{
     height: auto;
     margin-left: 10px;
     background-color: var(--secondary_color);
-    transition: 0.2s;
     cursor: pointer;
-}
-
-li:hover{
-    transform: scale(1.1);
-    color: rgb(255, 255, 255);
 }
 
 .navbar li a{
@@ -122,20 +116,15 @@ li:hover{
 .buscref{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
-    font-size: 40px; 
+    font-size: 28px; 
     font-weight: 500    ;   
     border: none;    
     border-bottom: 3px solid #757575;
-    transition: 0.2s;
 }
 
 .buscref:focus{
     outline: none;
     border-bottom: 6px solid var(--main_color);
-}
-
-.buscref:focus::placeholder{
-    color: rgba(2, 17, 92, 0.836);;
 }
 
 /* TABLA DE CROSSREFERENCE*/
@@ -181,6 +170,11 @@ tr{
 
 .labelreference {
     font-size: 30px;
+}
+
+.cellpart{
+    font-size: 28px;
+    background-color: var(--detail-color-yellow);
 }
 
 /*TITULO PARA LAS PÁGINAS UBICADO EN ADMINISTRADOR*/

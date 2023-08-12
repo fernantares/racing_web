@@ -7,7 +7,6 @@ btnCross.addEventListener('click', () => window.location.href = crossRefPage); /
 
 const inputCross = document.getElementById('buscref').value;
 
-
 inputCross.document.addEventListener('keydown', (e) => {
   const formCross = document.getElementById('formCross');
   e.preventdefault();
@@ -16,6 +15,5 @@ inputCross.document.addEventListener('keydown', (e) => {
     formCross.addEventListener.submit();
   }
 });
-
 
 
