@@ -1,6 +1,5 @@
 <!--***********INDEX PUBLICO*********-->
 
-
 <?php 
     $varTitle = "Principal";
     include("plantilla/header.php"); 
