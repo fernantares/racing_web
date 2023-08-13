@@ -1,4 +1,4 @@
-const crossRefPage = "http://localhost/racing_web/main/crossref.php";
+const crossRefPage = "http://192.168.1.117/racing_web/main/crossref.php";
 const btnCross = document.getElementById('btncross'); //boton de main que lleva a cross reference
 if(btnCross){
 btnCross.addEventListener('click', () => window.location.href = crossRefPage); //funcion del boton de main que lleva a crossreference
