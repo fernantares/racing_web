@@ -11,7 +11,7 @@
         </form>
             <table class="tableCross">
                     <thead>
-                    <th>NÚMERO PARTE</th>
+                    <th>NÚMERO RACING</th>
                     <th>REFERENCIA</th>
                     <th>MARCA</th>
                     </thead>
