@@ -131,20 +131,25 @@ input{
 .tableCross {
     width: 60%;
     margin: 40px auto 0px auto;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid;
 }
 
-.tableCross th { 
+.racingpart {
+    font-size: 30px;
+    font-weight: 800;
+    background-color: var(--detail-color-yellow);
+    padding: 12px;
+}
+
+.headerblue { 
     background-color: var(--main_color);
     color: white;
     padding: 12px;
   }
-
-tr{
-    border: 1px solid;
-}
 
 
 /* TABLA DE aAGREGAR ARTICULOS*/

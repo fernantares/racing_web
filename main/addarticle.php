@@ -13,9 +13,9 @@
         $sqlarticles = "Insert into articles (code, name) values ('".$datacode."', '".$dataname."')";
         $res = $conn->query($sqlarticles);  }?>
     
-        <form name="formAdd" action="addarticle.php" method="POST">
-            <input class="inputAdd" id="codetxt" type="text" class="" name="codetxt" placeholder="NÚMERO PARTE" autocomplete="new-password" autofocus spellcheck="false">
-            <input class="inputAdd" id="nametxt" type="text" class="" name="nametxt" placeholder="DESCRIPCION" autocomplete="new-password" autofocus spellcheck="false">
+        <form name="formAdd" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="POST">
+            <input class="inputAdd" id="codetxt" type="text" class="" name="codetxt" placeholder="NÚMERO PARTE" autocomplete="new-password" required autofocus spellcheck="false">
+            <input class="inputAdd" id="nametxt" type="text" class="" name="nametxt" placeholder="DESCRIPCION" autocomplete="new-password" required autofocus spellcheck="false">
             <button class="btn" type="submit hidden">AGREGAR</button>
         </form>
 
@@ -33,7 +33,7 @@
                             <td><?php echo $row['code']; ?></td>
                             <td><?php echo $row['name']; ?></td>
                           </tr>
-                          <?php }?> 
+                          <?php $conn->close(); }?> 
                 </tbody>
             </table>
 

@@ -12,7 +12,9 @@ inputCross.document.addEventListener('keydown', (e) => {
 
   if(e.keyCode == 13){
     formCross.addEventListener.submit();
+
   }
 });
+
 
 
