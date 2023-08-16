@@ -30,9 +30,9 @@
             </form>
 
               <table class="tableAdd">
-                <th>PARTE DE REFERENCIA</th>
-                <th>MARCA DE PARTE</th>
                 <th>NUMERO RACING</th>
+                <th>PARTE REFERENCIA</th>
+                <th>MARCA</th>
                 <tbody>
                    <?php $sqlarticles = "Select * from crosstable inner join articles on crosstable.idcode = articles.idarticle";
                     $res = $conn->query($sqlarticles);  

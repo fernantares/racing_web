@@ -10,7 +10,7 @@
     if(isset($_POST['codetxt'])){
         $datacode = $_POST['codetxt'];
         $dataname = $_POST['nametxt'];
-        $sqlarticles = "Insert into articles (code, name) values ('".$datacode."', '".$dataname."')";
+        $sqlarticles = "Insert into articles (code, name) values ('".strtoupper($datacode)."', '".strtoupper($dataname)."')";
         $res = $conn->query($sqlarticles);  }?>
     
         <form name="formAdd" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="POST">
@@ -20,20 +20,18 @@
         </form>
 
         <table class="tableAdd">
-                <th>ID</th>
                 <th>CODIGO</th>
                 <th>DESCRIPCION</th>
                 <tbody>
-                   <?php $sqlarticles = "Select * from  articles";
+                   <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat order by code ASC";
                     $res = $conn->query($sqlarticles);  
                             
                      while($row = $res->fetch_assoc()){ ?> 
                           <tr>
-                            <td><?php echo $row['idarticle']; ?></td>
                             <td><?php echo $row['code']; ?></td>
-                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['subcategorie']; ?></td>
                           </tr>
-                          <?php $conn->close(); }?> 
+                          <?php }?> 
                 </tbody>
             </table>
 
