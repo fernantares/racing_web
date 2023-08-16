@@ -32,6 +32,8 @@ input{
     accent-color: var(--main_color);
 }
 
+
+
 /* CONTENEDOR DE NAVEGADOR MAIN */
 .navbar_container{
     background-color: var(--main_color);
@@ -113,6 +115,15 @@ input{
     align-items: center;
 }
 
+/* CONTENEDOR DE INPUTS EN ADDREFERENCE/ADDARTICLE */
+.inputsdiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .buscref{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
@@ -170,11 +181,17 @@ input{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
     font-size: 24px; 
-    font-weight: 200;   
+    font-weight: 100;   
 }
 
 .labelreference {
     font-size: 30px;
+}
+
+.btnaddreference{
+    font-size: 20px;
+    background-color: var(--secondary_color);
+    color: white;
 }
 
 .cellpart{

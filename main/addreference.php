@@ -6,48 +6,57 @@
 ?>
 
     <div class="main">
-            <?php 
-            if(isset($_POST['codeList']))
-            {
-              $datalist = $_POST['codeList'];
-              $datapart = $_POST['parttxt'];
-              $datamake = $_POST['maketxt'];
-            $sqlreference = "Insert into crosstable (crosspart, crossmake, idcode) values ('".$datapart."', '".$datamake."', '".$datalist."')";
+      <div class="inputsdiv">
+        <?php 
+          if(isset($_POST['codeList'])){
+            $datapart = $_POST['parttxt'];
+            $datalist = $_POST['codelist'];
+            $datamake = $_POST['maketxt'];
+            $sqlreference = "Insert into crosstable (crosspart, idmakepart, idcode) values ('".$datapart."', '".$datamake."', '".$datalist."')";
             $res = $conn->query($sqlreference); }?> 
-            
-            <form action="addreference.php" method="POST">
-            <label class="labelreference" for="codeList">Seleccionar articulo:</label>
-            <select autofocus class="inputAdd" name="codeList" id="codeList">
-                 <?php $sqlarticles = "Select * from articles";
-                    $res = $conn->query($sqlarticles);  
-                     while($row = $res->fetch_assoc()){ ?> 
-                            <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code']; ?></option>
-                          <?php }?> 
-            </select>
-                          <input class="inputAdd" id="parttxt" type="text" class="" name="parttxt" placeholder="PARTE REFERENCIA" autocomplete="new-password"  spellcheck="false">
-                          <input class="inputAdd" id="maketxt" type="text" class="" name="maketxt" placeholder="MARCA DE PARTE" autocomplete="new-password"  spellcheck="false">   
-            <input class="btn" value="sumbit" type="submit">
+        <form action="addreference.php" method="POST">
+              <label class="labelreference" for="codeList"></label>
+              <select autofocus class="inputAdd" name="codelist" id="codelist">
+                <option disabled selected>SELECCIONA ARTICULO</option>
+                 <?php  
+                  $sqlarticles = "Select * from articles";
+                  $res = $conn->query($sqlarticles);  
+                  while($row = $res->fetch_assoc()){ ?> 
+                  <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code']; ?></option>
+                  <?php }?> 
+                </select>
+              <input class="inputAdd" id="parttxt" type="text" class="" name="parttxt" placeholder="AGREGA REFERENCIA" autocomplete="new-password"  spellcheck="false">
+              <select autofocus class="inputAdd" name="makelist" id="makelist">
+                <option disabled selected>SELECCIONA MARCA</option>
+                <?php
+                $sqlmakepart = "Select * from makepart order by makepart ASC";
+                $res = $conn->query($sqlmakepart);  
+                while($row = $res->fetch_assoc()){ ?> 
+                <option value="<?php echo $row['idmakepart'] ?>"><?php echo $row['makepart']; ?></option>
+                <?php }?> 
+              </select>
+              <input class="btn btnaddreference" value="sumbit" type="submit">
             </form>
-
+        </div>
               <table class="tableAdd">
                 <th>NUMERO RACING</th>
                 <th>PARTE REFERENCIA</th>
                 <th>MARCA</th>
+                <th>CATEGORIA</th>
                 <tbody>
-                   <?php $sqlarticles = "Select * from crosstable inner join articles on crosstable.idcode = articles.idarticle";
-                    $res = $conn->query($sqlarticles);  
+                   <?php $sqlcrosstable = "Select * from crosstable inner join articles on crosstable.idcode = articles.idarticle inner join makepart on crosstable.idmakepart = makepart.idmakepart INNER JOIN subcategories on articles.idsubcat = subcategories.idsubcat";
+                    $res = $conn->query($sqlcrosstable);  
                             
                      while($row = $res->fetch_assoc()){ ?> 
                           <tr>
                             <td><?php echo $row['code']; ?></td>
                             <td><?php echo $row['crosspart']; ?></td>
-                            <td><?php echo $row['crossmake']; ?></td>
+                            <td><?php echo $row['makepart']; ?></td>
+                            <td><?php echo $row['subcategorie']; ?></td>
                           </tr>
                           <?php }?> 
                 </tbody>
             </table>
-
-
-    </div>
+   
 
 <?php include("plantilla/footer.php"); ?>

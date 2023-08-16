@@ -10,18 +10,26 @@
     if(isset($_POST['codetxt'])){
         $datacode = $_POST['codetxt'];
         $dataname = $_POST['nametxt'];
-        $sqlarticles = "Insert into articles (code, name) values ('".strtoupper($datacode)."', '".strtoupper($dataname)."')";
+        $datasubcat = $_POST['subcategorieslist'];
+        $sqlarticles = "Insert into articles (code, name, idsubcat) values ('".strtoupper($datacode)."', '".strtoupper($dataname)."','".strtoupper($datacode)."')";
         $res = $conn->query($sqlarticles);  }?>
     
         <form name="formAdd" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="POST">
             <input class="inputAdd" id="codetxt" type="text" class="" name="codetxt" placeholder="NÚMERO PARTE" autocomplete="new-password" required autofocus spellcheck="false">
-            <input class="inputAdd" id="nametxt" type="text" class="" name="nametxt" placeholder="DESCRIPCION" autocomplete="new-password" required autofocus spellcheck="false">
+            <select placeholder autofocus class="inputAdd" name="subcategorieslist" id="codeList">
+                <?php
+                $sqlsubcat = "Select * from subcategories";
+                $res = $conn->query($sqlsubcat);  
+                while($row = $res->fetch_assoc()){ ?> 
+                <option value="<?php echo $row['idsubcat'] ?>"><?php echo $row['subcategorie']; ?></option>
+                <?php }?> 
+            </select>
             <button class="btn" type="submit hidden">AGREGAR</button>
         </form>
 
         <table class="tableAdd">
                 <th>CODIGO</th>
-                <th>DESCRIPCION</th>
+                <th>CATEGORIA</th>
                 <tbody>
                    <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat order by code ASC";
                     $res = $conn->query($sqlarticles);  
