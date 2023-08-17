@@ -20,7 +20,12 @@
                     <?php  
                         if(isset($_POST['buscRef'])){
                         $databusc = $_POST['buscRef'];
-                        $sqlcross = "Select a.code as codearticle, c.crosspart crosspartcross, m1.makepart makepartcross, m2.makepart makepartart from crosstable as c join articles as a on c.idarticle = a.idarticle join makeparttable as m1 on m1.idmakepart = c.idmakepartcross join makeparttable as m2 on m2.idmakepart = a.idmakepartarticles where a.code LIKE '%".$databusc."%' or c.crosspart LIKE '%".$databusc."%'";
+                        $sqlcross = "Select a.code as codearticle, c.crosspart crosspartcross, m1.makepart makepartcross, m2.makepart makepartart 
+                        from crosstable as c 
+                        join articles as a on c.idarticle = a.idarticle 
+                        join makeparttable as m1 on m1.idmakepart = c.idmakepartcross 
+                        join makeparttable as m2 on m2.idmakepart = a.idmakepartarticles
+                         where a.code LIKE '%".$databusc."%' or c.crosspart LIKE '%".$databusc."%'";
                         $res = $conn->query($sqlcross);  
                         while(!is_null($row = $res->fetch_assoc())){ ?> 
                     <tr>
