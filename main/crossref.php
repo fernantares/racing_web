@@ -11,20 +11,7 @@
         </form>
             <table class="tableCross">
                 <thead>
-                    <tr>
-                        <th class="racingpart" colspan="2">
-                            <?php 
-                                if(isset($_POST['buscRef'])){
-                                $databusc = $_POST['buscRef'];
-                                $sqlpart = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle where code LIKE '%".$databusc."%' or crosspart LIKE '%".$databusc."%'";
-                                $res = $conn->query($sqlpart);
-                                if(!is_null($row = $res->fetch_assoc())){ 
-                                echo $row['code']; }
-                                else
-                                echo "SIN REGISTRO.";
-                                }?>
-                        </th>
-                     </tr>
+                    <th class="headerblue">CÓDIGO</th>
                     <th class="headerblue">REFERENCIA</th>
                     <th class="headerblue">MARCA</th>
                 </thead>
@@ -32,10 +19,11 @@
                     <?php  
                         if(isset($_POST['buscRef'])){
                         $databusc = $_POST['buscRef'];
-                        $sqlcrossbusc = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle inner join makepart on crosspart.idmakepart = makepart.idmakepart where code LIKE '%".$databusc."%' or crosspart LIKE '%".$databusc."%'";
-                        $res = $conn->query($sqlcrossbusc);  
+                        $sqlcross = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle inner join makepart on crosstable.idmakepart = makepart.idmakepart where code LIKE '%".$databusc."%' or crosspart LIKE '%".$databusc."%'";
+                        $res = $conn->query($sqlcross);  
                         while(!is_null($row = $res->fetch_assoc())){ ?> 
                     <tr>
+                        <td><?php echo $row['code']; ?></td>
                         <td><?php echo $row['crosspart']; ?></td>
                         <td><?php echo $row['makepart']; ?></td>
                     </tr>

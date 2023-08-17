@@ -17,22 +17,22 @@
         <form action="addreference.php" method="POST">
           <label class="labelreference" for="codelist"></label>
           <input class="inputAdd" id="parttxt" type="text" class="" name="parttxt" placeholder="NÚMERO REFERENCIA" autocomplete="new-password"  spellcheck="false">
-          <select autofocus class="inputAdd" name="codelist" id="codelist">
-            <option disabled selected>SELECCIONA ARTICULO</option>
-              <?php  
-              $sqlarticles = "Select * from articles";
-              $res = $conn->query($sqlarticles);  
-              while($row = $res->fetch_assoc()){ ?> 
-              <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code'];?></option>
-              <?php }?> 
-          </select>
           <select autofocus class="inputAdd" name="makelist" id="makelist">
-            <option disabled selected>SELECCIONA MARCA</option>
+            <option disabled selected>MARCA DE REFERENCIA</option>
               <?php
               $sqlmakepart = "Select * from makepart order by makepart ASC";
               $res = $conn->query($sqlmakepart);  
               while($row = $res->fetch_assoc()){ ?> 
               <option value="<?php echo $row['idmakepart'] ?>"><?php echo $row['makepart']; ?></option>
+              <?php }?> 
+          </select>
+          <select autofocus class="inputAdd" name="codelist" id="codelist">
+            <option disabled selected>ARTICULO RACING</option>
+              <?php  
+              $sqlarticles = "Select * from articles";
+              $res = $conn->query($sqlarticles);  
+              while($row = $res->fetch_assoc()){ ?> 
+              <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code'];?></option>
               <?php }?> 
           </select>
           <input class="btn btnaddreference" value="sumbit" type="submit">
