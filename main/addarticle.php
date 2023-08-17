@@ -15,17 +15,18 @@
         $res = $conn->query($sqlarticles);  }?>
     
         <form name="formAdd" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="POST">
-            <input class="inputAdd" id="codetxt" type="text" class="" name="codetxt" placeholder="NÚMERO PARTE" autocomplete="new-password" required autofocus spellcheck="false">
+            <input class="inputAdd" id="codetxt" type="text" class="" name="codetxt" placeholder="CODIGO ARTICULO" autocomplete="new-password" required autofocus spellcheck="false">
             <select autofocus class="inputAdd" name="makelist" id="makelist">
-                <option disabled selected>SELECCIONA MARCA</option>
+                <option disabled selected>MARCA ARTICULO</option>
                 <?php
-                $sqlmakepart = "Select * from makepart order by makepart ASC";
+                $sqlmakepart = "Select * from makeparttable order by makepart ASC";
                 $res = $conn->query($sqlmakepart);  
                 while($row = $res->fetch_assoc()){ ?> 
                 <option value="<?php echo $row['idmakepart'] ?>"><?php echo $row['makepart']; ?></option>
                 <?php }?> 
               </select>
             <select autofocus class="inputAdd" name="subcategorieslist" id="subcatlist">
+            <option disabled selected>SELECCIONA CATEGORIA ARTICULO</option>
                 <?php
                 $sqlsubcat = "Select * from subcategories order by subcategorie";
                 $res = $conn->query($sqlsubcat);  
@@ -41,7 +42,7 @@
                 <th>MARCA</th>
                 <th>CATEGORIA</th>
                 <tbody>
-                   <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat inner join makepart on articles.idmakepart = makepart.idmakepart order by code ASC";
+                   <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat inner join makeparttable on articles.idmakepartarticles = makeparttable.idmakepart order by code ASC";
                     $res = $conn->query($sqlarticles);  
                             
                      while($row = $res->fetch_assoc()){ ?> 
