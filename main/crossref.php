@@ -13,21 +13,21 @@
                 <thead>
                     <th class="headerblue">CÓDIGO</th>
                     <th class="headerblue">MARCA CODIGO</th>
-                    <th class="headerblue">REFERENCIA</th>
+                    <th class="headerblue">NÚMERO REFERENCIA</th>
                     <th class="headerblue">MARCA REFERENCIA</th>
                 </thead>
                 <tbody>
                     <?php  
                         if(isset($_POST['buscRef'])){
                         $databusc = $_POST['buscRef'];
-                        $sqlcross = "Select articles.code, crosstable.crosspart , c1.makepart idmakepartcross, a1.makepart idmakepartarticles , from crosstable join articles on crosstable.idarticle = articles.idarticle join makepart c1 on crosstable.idmakepartcross = c1.idmakepart join makepart a1 on articles.idmakepartarticles = a1.idmakepart where articles.code LIKE '%".$databusc."%' or crosstable.crosspart LIKE '%".$databusc."%'";
+                        $sqlcross = "Select a.code as codearticle, c.crosspart crosspartcross, m1.makepart makepartcross, m2.makepart makepartart from crosstable as c join articles as a on c.idarticle = a.idarticle join makeparttable as m1 on m1.idmakepart = c.idmakepartcross join makeparttable as m2 on m2.idmakepart = a.idmakepartarticles where a.code LIKE '%".$databusc."%' or c.crosspart LIKE '%".$databusc."%'";
                         $res = $conn->query($sqlcross);  
                         while(!is_null($row = $res->fetch_assoc())){ ?> 
                     <tr>
-                        <td><?php echo $row['articles.code']; ?></td>
-                        <td><?php echo $row['a1']; ?></td>
-                        <td><?php echo $row['crosspart']; ?></td>
-                        <td><?php echo $row['c1']; ?></td>
+                        <td><?php echo $row['codearticle']; ?></td>
+                        <td><?php echo $row['makepartart']; ?></td>
+                        <td><?php echo $row['crosspartcross']; ?></td>
+                        <td><?php echo $row['makepartcross']; ?></td>
                     </tr>
                         <?php  } 
                             $conn->close();                        
