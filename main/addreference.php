@@ -16,6 +16,15 @@
             $res = $conn->query($sqlreference); }?> 
         <form action="addreference.php" method="POST">
           <label class="labelreference" for="codelist"></label>
+          <select autofocus class="inputAdd" name="codelist" id="codelist">
+            <option disabled selected>ARTICULOS AGREGADOS</option>
+              <?php  
+              $sqlarticles = "Select * from articles order by code DESC";
+              $res = $conn->query($sqlarticles);  
+              while($row = $res->fetch_assoc()){ ?> 
+              <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code'];?></option>
+              <?php }?> 
+          </select>
           <input class="inputAdd" id="parttxt" type="text" class="" name="parttxt" placeholder="NÚMERO REFERENCIA" autocomplete="new-password"  spellcheck="false">
           <select autofocus class="inputAdd" name="makelist" id="makelist">
             <option disabled selected>MARCA DE REFERENCIA</option>
@@ -26,22 +35,14 @@
               <option value="<?php echo $row['idmakepart'] ?>"><?php echo $row['makepart']; ?></option>
               <?php }?> 
           </select>
-          <select autofocus class="inputAdd" name="codelist" id="codelist">
-            <option disabled selected>ARTICULO RACING</option>
-              <?php  
-              $sqlarticles = "Select * from articles";
-              $res = $conn->query($sqlarticles);  
-              while($row = $res->fetch_assoc()){ ?> 
-              <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code'];?></option>
-              <?php }?> 
-          </select>
-          <input class="btn btnaddreference" value="sumbit" type="submit">
+          <input class="btn btnaddreference" type="submit">
         </form>
       </div>
+      <p style="color: red; font-size:20px;">Nota: El articulo ya tiene que estar registrado para poder agregarle su referencia.</p>
               <table class="tableAdd">
-                <th>NUMERO RACING</th>
+                <th>ARTICULO</th>
                 <th>PARTE REFERENCIA</th>
-                <th>MARCA</th>
+                <th>MARCA REFERENCIA</th>
                 <th>CATEGORIA</th>
                 <tbody>
                    <?php $sqlcrosstable = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle inner join makepart on crosstable.idmakepart = makepart.idmakepart INNER JOIN subcategories on articles.idsubcat = subcategories.idsubcat";
