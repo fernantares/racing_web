@@ -140,7 +140,7 @@ input{
 
 /* TABLA DE CROSSREFERENCE*/
 .tableCross {
-    width: 60%;
+    width: 70%;
     margin: 40px auto 0px auto;
     font-size: 24px;
     text-align: center;
@@ -148,6 +148,12 @@ input{
     table-layout: fixed;
     border: 1px solid;
 }
+
+.tableCross td{
+    padding: 5px;
+    width: 30px;
+}
+
 
 .racingpart {
     font-size: 30px;
@@ -165,7 +171,7 @@ input{
 
 /* TABLA DE aAGREGAR ARTICULOS*/
 .tableAdd {
-    width: 60%;
+    width: 70%;
     margin: 40px auto 0px auto;
     font-size: 20px;
     text-align: center;
@@ -175,6 +181,11 @@ input{
 .tableAdd th{
     background-color: var(--main_color);
     color: white;
+}
+
+.tableAdd td{
+    padding: 5px;
+    width: 30px;
 }
 
 .inputAdd{

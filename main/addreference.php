@@ -12,14 +12,14 @@
             $datapart = $_POST['parttxt'];
             $datacodelist = $_POST['codelist'];
             $datamake = $_POST['makelist'];
-            $sqlreference = "insert into crosstable (crosspart, idmakepart, idarticle) values ('".$datapart."', '".$datamake."', '".$datacodelist."')";
+            $sqlreference = "insert into crosstable (crosspart, idmakepartcross, idarticle) values ('".strtoupper($datapart)."', '".strtoupper($datamake)."', '".strtoupper($datacodelist)."')";
             $res = $conn->query($sqlreference); }?> 
         <form action="addreference.php" method="POST">
           <label class="labelreference" for="codelist"></label>
           <select autofocus class="inputAdd" name="codelist" id="codelist">
             <option disabled selected>ARTICULOS AGREGADOS</option>
               <?php  
-              $sqlarticles = "Select * from articles order by code DESC";
+              $sqlarticles = "Select * from articles order by idarticle  DESC";
               $res = $conn->query($sqlarticles);  
               while($row = $res->fetch_assoc()){ ?> 
               <option value="<?php echo $row['idarticle'] ?>"><?php echo $row['code'];?></option>
@@ -29,7 +29,7 @@
           <select autofocus class="inputAdd" name="makelist" id="makelist">
             <option disabled selected>MARCA DE REFERENCIA</option>
               <?php
-              $sqlmakepart = "Select * from makepart order by makepart ASC";
+              $sqlmakepart = "Select * from makeparttable order by makepart ASC";
               $res = $conn->query($sqlmakepart);  
               while($row = $res->fetch_assoc()){ ?> 
               <option value="<?php echo $row['idmakepart'] ?>"><?php echo $row['makepart']; ?></option>
@@ -45,7 +45,7 @@
                 <th>MARCA REFERENCIA</th>
                 <th>CATEGORIA</th>
                 <tbody>
-                   <?php $sqlcrosstable = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle inner join makepart on crosstable.idmakepart = makepart.idmakepart INNER JOIN subcategories on articles.idsubcat = subcategories.idsubcat";
+                   <?php $sqlcrosstable = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle inner join makeparttable on crosstable.idmakepartcross = makeparttable.idmakepart INNER JOIN subcategories on articles.idsubcat = subcategories.idsubcat order by idcross DESC";
                     $res = $conn->query($sqlcrosstable);  
                             
                      while($row = $res->fetch_assoc()){ ?> 

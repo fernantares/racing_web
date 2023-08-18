@@ -11,8 +11,8 @@
         $datacode = $_POST['codetxt'];
         $datamake = $_POST['makelist'];
         $datasubcat = $_POST['subcategorieslist'];
-        $sqlarticles = "Insert into articles (code, idmakepart, idsubcat) values ('".strtoupper($datacode)."', '".strtoupper($datamake)."','".strtoupper($datasubcat)."')";
-        $res = $conn->query($sqlarticles);  }?>
+        $sqlarticlesadd = "Insert into articles (code, idmakepartarticles, idsubcat) values ('".strtoupper($datacode)."', '".$datamake."','".$datasubcat."')";
+        $res = $conn->query($sqlarticlesadd);  }?>
     
         <form name="formAdd" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="POST">
             <input class="inputAdd" id="codetxt" type="text" class="" name="codetxt" placeholder="CODIGO ARTICULO" autocomplete="new-password" required autofocus spellcheck="false">
@@ -42,7 +42,7 @@
                 <th>MARCA</th>
                 <th>CATEGORIA</th>
                 <tbody>
-                   <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat inner join makeparttable on articles.idmakepartarticles = makeparttable.idmakepart order by code ASC";
+                   <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat inner join makeparttable on articles.idmakepartarticles = makeparttable.idmakepart order by idarticle DESC";
                     $res = $conn->query($sqlarticles);  
                             
                      while($row = $res->fetch_assoc()){ ?> 
