@@ -16,13 +16,13 @@
             <img class="logo" src="../img/logo.webp" alt="logoimg">
                 <ul class="navbar"> 
                     <li  class="Ini">
-                    <a href="crossref.php" target="_blank">CONSULTAR REFERENCIA</a>
+                    <a href="crossref.php" target="_self">CONSULTAR REFERENCIA</a>
                     </li>
                     <li class="Nos">
-                        <a href="addarticle.php" target="_blank">AGREGAR ARTICULO</a>
+                        <a href="addarticle.php" target="_self">AGREGAR ARTICULO</a>
                     </li>
                     <li class="Con">
-                        <a href="addreference.php" target="_blank">AGREGAR REFERENCIA</a>
+                        <a href="addreference.php" target="_self">AGREGAR REFERENCIA</a>
                     </li>
                 </ul>
                    </div>
