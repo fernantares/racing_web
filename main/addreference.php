@@ -35,15 +35,15 @@
               <option value="<?php echo $row['idmakepart'] ?>"><?php echo $row['makepart']; ?></option>
               <?php }?> 
           </select>
-          <input class="btn btnaddreference" type="submit">
+          <input class="btn btnaddorange" type="submit">
         </form>
       </div>
       <p style="color: red; font-size:20px;">Nota: El articulo ya tiene que estar registrado para poder agregarle su referencia.</p>
               <table class="tableAdd">
-                <th>ARTICULO</th>
-                <th>PARTE REFERENCIA</th>
-                <th>MARCA REFERENCIA</th>
-                <th>CATEGORIA</th>
+                <th  class="headertable">ARTICULO</th>
+                <th class="headertable">PARTE REFERENCIA</th>
+                <th class="headertable">MARCA REFERENCIA</th>
+                <th class="headertable">CATEGORIA</th>
                 <tbody>
                    <?php $sqlcrosstable = "Select * from crosstable inner join articles on crosstable.idarticle = articles.idarticle inner join makeparttable on crosstable.idmakepartcross = makeparttable.idmakepart INNER JOIN subcategories on articles.idsubcat = subcategories.idsubcat order by idcross DESC";
                     $res = $conn->query($sqlcrosstable);  

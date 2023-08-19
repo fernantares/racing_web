@@ -34,13 +34,13 @@
                 <option value="<?php echo $row['idsubcat'] ?>"><?php echo $row['subcategorie']; ?></option>
                 <?php }?> 
             </select>
-            <button class="btn" type="submit hidden">AGREGAR</button>
+            <button class="btn btnorange" type="submit hidden">AGREGAR</button>
         </form>
 
         <table class="tableAdd">
-                <th>CODIGO</th>
-                <th>MARCA</th>
-                <th>CATEGORIA</th>
+                <th class="headertable">CODIGO</th>
+                <th class="headertable">MARCA</th>
+                <th class="headertable">CATEGORIA</th>
                 <tbody>
                    <?php $sqlarticles = "Select * from  articles inner join subcategories on articles.idsubcat = subcategories.idsubcat inner join makeparttable on articles.idmakepartarticles = makeparttable.idmakepart order by idarticle DESC";
                     $res = $conn->query($sqlarticles);  

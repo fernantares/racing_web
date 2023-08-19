@@ -9,7 +9,7 @@ html, body{
 /*---VARIABLES---*/
 :root{
     --main_color: rgb(1, 11, 63);
-    --secondary_color: rgba(255, 115, 0, 0.829);
+    --secondary_color: rgb(255, 81, 0);
     --detail-color-blue: rgb(4, 39, 146);
     --detail-color-red: rgba(219, 43, 57);
     --detail-color-yellow: rgb(255, 173, 9);
@@ -19,11 +19,11 @@ html, body{
 
 /* PLANTILLA BUTTON*/
 .btn{
-    letter-spacing: 1.5px;
-    box-shadow: 2px 4px 0px 0px rgb(99, 99, 99);
+    letter-spacing: 1px;
+    /*box-shadow: 2px 4px 0px 0px rgb(99, 99, 99);*/
     border: 0px;
     border-radius: 5px;
-    padding: 15px;
+    padding: 10px;
     cursor: pointer;
     font-weight: 600;
 }
@@ -42,7 +42,7 @@ input{
     align-items: center;
     justify-content: space-around;
     height: 8%;
-    /*box-shadow: 0px 2px 1.5px 0px gray;*/
+    box-shadow: 0px 2px 1.5px 0px gray;
     padding: 10px;
 }
 
@@ -66,15 +66,20 @@ input{
 } 
 
 .navbar li{
-    font-size: 15px;
-    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
     text-align: center;
-    padding: 12px;
+    padding: 4px;
     list-style-type: none;
     height: auto;
     margin-left: 10px;
-    background-color: var(--secondary_color);
     cursor: pointer;
+    border: none;
+    transition: .1s ease-in ;
+}
+
+.navbar li:hover{
+    border-bottom: solid 4px var(--secondary_color);
 }
 
 .navbar li a{
@@ -96,7 +101,7 @@ input{
     font-size: 15px;
     background-color: var(--secondary_color);
     color: white;
-    transition: 0.2s ease-out;
+    transition: 0.2s;
     width: 180px;
 }
 
@@ -127,45 +132,40 @@ input{
 .buscref{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
-    font-size: 28px; 
+    font-size: 24px; 
     font-weight: 500    ;   
     border: none;    
-    border-bottom: 3px solid #757575;
+    border: 3px solid #757575;
+    outline: none;
+    transition: .1s ease-in;
 }
 
 .buscref:focus{
-    outline: none;
-    border-bottom: 6px solid var(--main_color);
+    border: none;
+    border-bottom: 3px solid var(--main_color);
 }
 
 /* TABLA DE CROSSREFERENCE*/
 .tableCross {
     width: 70%;
     margin: 40px auto 0px auto;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     border-collapse: collapse;
     table-layout: fixed;
-    border: 1px solid;
+    border: 2px solid;
 }
 
 .tableCross td{
     padding: 5px;
-    width: 30px;
+    width: 20px;
 }
 
-
-.racingpart {
-    font-size: 30px;
-    font-weight: 800;
-    background-color: var(--detail-color-yellow);
-    padding: 12px;
-}
-
-.headerblue { 
-    background-color: var(--main_color);
+.headertable { 
+    background-color: var(--secondary_color);
     color: white;
     padding: 12px;
+    border-bottom: 2px solid black;
   }
 
 
@@ -176,31 +176,33 @@ input{
     font-size: 20px;
     text-align: center;
     border-collapse: collapse;
+    border: 2px solid;
 }
 
 .tableAdd th{
-    background-color: var(--main_color);
+    background-color: var(--secondary_color);
     color: white;
 }
 
 .tableAdd td{
     padding: 5px;
-    width: 30px;
+    width: 20px;
 }
 
 .inputAdd{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
-    font-size: 24px; 
-    font-weight: 100;   
+    font-size: 20px; 
+    font-weight: 100;
+    padding: 5px;   
 }
 
 .labelreference {
     font-size: 30px;
 }
 
-.btnaddreference{
-    font-size: 20px;
+.btnorange{
+    font-size: 18px;
     background-color: var(--secondary_color);
     color: white;
 }

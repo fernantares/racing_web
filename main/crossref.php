@@ -11,10 +11,10 @@
         </form>
             <table class="tableCross">
                 <thead>
-                    <th class="headerblue">CÓDIGO</th>
-                    <th class="headerblue">MARCA CODIGO</th>
-                    <th class="headerblue">NÚMERO REFERENCIA</th>
-                    <th class="headerblue">MARCA REFERENCIA</th>
+                    <th class="headertable">MARCA</th>
+                    <th class="headertable">CÓDIGO</th>
+                    <th class="headertable">MARCA REFERENCIA</th>
+                    <th class="headertable">NÚM REFERENCIA</th>
                 </thead>
                 <tbody>
                     <?php  
@@ -29,10 +29,10 @@
                         $res = $conn->query($sqlcross);  
                         while(!is_null($row = $res->fetch_assoc())){ ?> 
                     <tr>
-                        <td><?php echo $row['codearticle']; ?></td>
                         <td><?php echo $row['makepartart']; ?></td>
-                        <td><?php echo $row['crosspartcross']; ?></td>
+                        <td><?php echo $row['codearticle']; ?></td>
                         <td><?php echo $row['makepartcross']; ?></td>
+                        <td><?php echo $row['crosspartcross']; ?></td>
                     </tr>
                         <?php  } 
                             $conn->close();                        
