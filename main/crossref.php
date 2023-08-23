@@ -21,17 +21,24 @@
                         if(isset($_GET['numpart'])){
                         $databusc = $_GET['numpart'];
                         $res = $conn->execute_query(sqlcross(), ["%$databusc%","%$databusc%"]); 
-                        while(!is_null($row = $res->fetch_assoc())){ ?> 
+                        while($row = $res->fetch_assoc()){ 
+                    ?> 
                     <tr>
                         <td><?php echo $row['makepartart']; ?></td>
                         <td><?php echo $row['codearticle']; ?></td>
                         <td><?php echo $row['makepartcross']; ?></td>
                         <td><?php echo $row['crosspartcross']; ?></td>
                     </tr>
-                        <?php  } 
-                            $conn->close();                        
-                        }?>
-
+                    <?php
+                    } 
+                    if(is_null($row)) {
+                    ?>
+                    <td colspan="4"><?php echo "NO EXISTE REFERENCIA";?></td>
+                    <?php
+                    }
+                    $conn->close(); 
+                    }
+                    ?> 
                 </tbody>
             </table> 
    
