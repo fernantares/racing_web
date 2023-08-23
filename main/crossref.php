@@ -6,8 +6,8 @@
 ?>
 
     <div class="main">
-        <form name="formCross" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="POST"> 
-            <input id="buscref" type="text" class="buscref" name="buscRef" placeholder="BUSCAR..." autofocus spellcheck="false">
+        <form name="formCross" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="GET"> 
+            <input id="buscref" type="text" class="buscref" name="numpart" placeholder="BUSCAR..." autofocus spellcheck="false">
         </form>
             <table class="tableCross">
                 <thead>
@@ -18,15 +18,9 @@
                 </thead>
                 <tbody>
                     <?php  
-                        if(isset($_POST['buscRef'])){
-                        $databusc = $_POST['buscRef'];
-                        $sqlcross = "Select a.code as codearticle, c.crosspart crosspartcross, m1.makepart makepartcross, m2.makepart makepartart 
-                        from crosstable as c 
-                        join articles as a on c.idarticle = a.idarticle 
-                        join makeparttable as m1 on m1.idmakepart = c.idmakepartcross 
-                        join makeparttable as m2 on m2.idmakepart = a.idmakepartarticles
-                         where a.code LIKE '%".$databusc."%' or c.crosspart LIKE '%".$databusc."%'";
-                        $res = $conn->query($sqlcross);  
+                        if(isset($_GET['numpart'])){
+                        $databusc = $_GET['numpart'];
+                        $res = $conn->execute_query(sqlcross(), ["%$databusc%","%$databusc%"]); 
                         while(!is_null($row = $res->fetch_assoc())){ ?> 
                     <tr>
                         <td><?php echo $row['makepartart']; ?></td>

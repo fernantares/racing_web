@@ -12,7 +12,8 @@
             $datapart = $_POST['parttxt'];
             $datacodelist = $_POST['codelist'];
             $datamake = $_POST['makelist'];
-            $sqlreference = "insert into crosstable (crosspart, idmakepartcross, idarticle) values ('".strtoupper($datapart)."', '".strtoupper($datamake)."', '".strtoupper($datacodelist)."')";
+            $sqlreference = "insert into crosstable (crosspart, idmakepartcross, idarticle) values (?,?,?)";
+            $res = $conn->execute_query($sqlreference,[strtoupper($datapart),strtoupper($datamake),strtoupper($datacodelist)]);
             $res = $conn->query($sqlreference); }?> 
         <form action="addreference.php" method="POST">
           <label class="labelreference" for="codelist"></label>
@@ -40,7 +41,8 @@
       </div>
       <p style="color: red; font-size:20px;">Nota: El articulo ya tiene que estar registrado para poder agregarle su referencia.</p>
               <table class="tableAdd">
-                <th  class="headertable">ARTICULO</th>
+                <th class="headertable">ARTICULO</th>
+                <th class="headertable"></th>
                 <th class="headertable">PARTE REFERENCIA</th>
                 <th class="headertable">MARCA REFERENCIA</th>
                 <th class="headertable">CATEGORIA</th>
@@ -51,6 +53,7 @@
                      while($row = $res->fetch_assoc()){ ?> 
                           <tr>
                             <td><?php echo $row['code']; ?></td>
+                            <td>=></td>
                             <td><?php echo $row['crosspart']; ?></td>
                             <td><?php echo $row['makepart']; ?></td>
                             <td><?php echo $row['subcategorie']; ?></td>
