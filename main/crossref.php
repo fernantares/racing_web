@@ -31,11 +31,6 @@
                     </tr>
                     <?php
                     } 
-                    if(is_null($row)) {
-                    ?>
-                    <td colspan="4"><?php echo "NO EXISTE REFERENCIA";?></td>
-                    <?php
-                    }
                     $conn->close(); 
                     }
                     ?> 
